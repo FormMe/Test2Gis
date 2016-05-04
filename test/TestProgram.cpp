@@ -2,7 +2,7 @@
 
 namespace test
 {
-	//метод задает им€ файла с которым работаем
+	//метод задает имя файла с которым работаем
 	void TestProgram::set_filename(const std::string& filename)
 	{
 		this->filename = filename;
@@ -18,7 +18,7 @@ namespace test
 		if (!try_open_file(false, fin))
 			return ResultCode::error;
 		checksum = 0;
-		//поочередно считываем 32битные слова, счита€ чексумму по заднной формуле
+		//поочередно считываем 32битные слова, считая чексумму по заднной формуле
 		while (!fin.eof())
 		{
 			std::uint32_t word32bit = 0;
@@ -45,9 +45,9 @@ namespace test
 			auto notFound = true;
 			/*считываем файл построчно чтобы избежать
 			возможного переполнени€ в случае считывани€ файла целиком
-			такое считывание никак не повли€ет на результат*/
+			такое считывание никак не повлияет на результат*/
 			getline(fin, line);
-			for (auto foundedPos = 0; notFound; ++foundedPos)				//поиск следующего вхождение начинаетс€ с +1 символа
+			for (auto foundedPos = 0; notFound; ++foundedPos)				//поиск следующего вхождение начинается с +1 символа
 			{
 				foundedPos = line.find(word, foundedPos);
 				if ((notFound = foundedPos != std::string::npos)) ++cnt;	//если слово найдено увеличиваем количество

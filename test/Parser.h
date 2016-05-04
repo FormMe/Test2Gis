@@ -3,7 +3,7 @@
 
 namespace test
 {
-	/*коды определ€ющие результат работы*/
+	/*коды определяющие результат работы*/
 	enum ResultCode
 	{
 		error = -1,
@@ -13,8 +13,8 @@ namespace test
 		success = 3
 	};
 
-	/*класс осуществл€ет разбор параметров командной строки
-	класс хранит полученные из параметров значени€*/
+	/*класс осуществляет разбор параметров командной строки
+	класс хранит полученные из параметров значения*/
 	class Parser
 	{
 	public:
@@ -26,9 +26,9 @@ namespace test
 		const std::string& get_key();
 
 	private:
-		std::string filename;	//им€ файла дл€ работы
-		std::string command;	//комманда дл€ выполнени€
-		std::string word;		//слово дл€ поиска
+		std::string filename;	//имя файла для работы
+		std::string command;	//комманда для выполнения
+		std::string word;		//слово для поиска
 		std::string key;		//первый ключ -h или -f
 	};
 }
