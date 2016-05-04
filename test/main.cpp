@@ -7,8 +7,8 @@ int main(int argc, char* argv[])
 	try
 	{
 		Parser argvParser;
-		auto commandKey = argvParser.try_parse(argc, argv); 	//РїР°СЂСЃРёРЅРі РїР°СЂР°РјРµС‚СЂРѕРІ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё
-		switch (commandKey)					//РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РїР°СЂСЃРёРЅРіР° РІС‹РїРѕР»РЅСЏРµРј СЃРѕРѕС‚РІРµС‚РІСѓСЋС‰СѓСЋ РєРѕРјР°РЅРґСѓ
+		auto commandKey = argvParser.try_parse(argc, argv); //парсинг параметров командной строки
+		switch (commandKey)									//в зависимости от результат парсинга выполняем соответвующую команду
 		{
 		case ResultCode::checksum:
 		{
